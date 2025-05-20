@@ -71,16 +71,17 @@ public class Main {
 }
 ```
 9. Comando para o JFlex:
-`java -cp jflex.jar:jcup.jar jflex.Main exemplo.flex`
+- `java -cp jflex.jar:jcup.jar jflex.Main exemplo.flex`
 
 10. Comando para o JCup:
-`java -cp jcup.jar java_cup.Main exemplo.cup`
+- `java -cp jcup.jar java_cup.Main exemplo.cup`
 
 11. Comandos para compilar as classes .java:
-`javac -cp jcup.jar *.java`
+- `javac -cp jcup.jar *.java`
 
 12. Rodar a classe principal:
-`java -cp .:jcup.jar Main` 
+- `java -cp .:jcup.jar Main` 
 
-13. Informe expressões matemáticas do tipo: 1 + 2 - 7; (é necessário terminar com ";")
+13. Informe expressões matemáticas do tipo: 
+- `1 + 2 - 7;` (é necessário terminar com ";")
 
