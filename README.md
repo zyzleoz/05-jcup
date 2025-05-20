@@ -88,5 +88,6 @@ public class Main {
 - ```
   1 + 2
   - 7;
-  ``` (é necessário terminar com ";")
+  ```
+  (é necessário terminar com ";")
 
