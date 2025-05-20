@@ -85,3 +85,8 @@ public class Main {
 13. Informe expressões matemáticas do tipo: 
 - `1 + 2 - 7;` (é necessário terminar com ";")
 
+- ```
+  1 + 2
+  - 7;
+  ``` (é necessário terminar com ";")
+
