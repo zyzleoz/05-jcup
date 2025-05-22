@@ -92,4 +92,4 @@ public class Main {
   (é necessário terminar com ";")
 
 14. Excluir arquivos desnecessários: 
-- `rm -rf *.class parser.java sym.java Yylex.java`
+- `rm -rf *.class parser.java sym.java Yylex.java *.java~`
