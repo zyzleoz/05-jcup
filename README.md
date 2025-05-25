@@ -76,9 +76,9 @@ expr ::= expr:a MAIS expr:b         {: RESULT = a.intValue() + b.intValue(); :}
 
 /*
 Usar %prec:
-É importante quando um mesmo token tem dois significados diferentes (como o - unário e binário).
-Evita conflitos de precedência.
-Garante a construção correta da árvore sintática e a avaliação da expressão.
+  É importante quando um mesmo token tem dois significados diferentes (como o - unário e binário).
+  Evita conflitos de precedência.
+  Garante a construção correta da árvore sintática e a avaliação da expressão.
 
 => Usar %prec MENOSUNARIO para informar:
    "Essa regra tem a precedência do token MENOSUNARIO, 
