@@ -1,4 +1,4 @@
-# 04-jcup
+# 05-jcup
 
 1. Criar o arquivo `exemplo.flex`:
 - `touch exemplo.flex`
