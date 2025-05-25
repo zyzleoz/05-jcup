@@ -54,12 +54,13 @@ inteiro = {digito}+
 import java_cup.runtime.*;
 
 terminal Integer INTEIRO;
-terminal MAIS, MENOS, PTVIRG, PARENTESQ, PARENTDIR;
+terminal MAIS, MENOS, MENOSUNARIO, PTVIRG, PARENTESQ, PARENTDIR;
 
 non terminal inicio;
 non terminal Integer expr;
 
 precedence left MAIS, MENOS;
+precedence right MENOSUNARIO; // Menos unário com maior precedência, associatividade à direita.
 
 start with inicio;
 
@@ -68,9 +69,21 @@ inicio ::= expr:e PTVIRG {: System.out.println(e); :}
 
 expr ::= expr:a MAIS expr:b         {: RESULT = a.intValue() + b.intValue(); :}
        | expr:a MENOS expr:b        {: RESULT = a.intValue() - b.intValue(); :}
+       | MENOS expr:a               {: RESULT = -a; :} %prec MENOSUNARIO       
        | PARENTESQ expr:a PARENTDIR {: RESULT = a.intValue(); :}
        | INTEIRO:a                  {: RESULT = a.intValue(); :}
        ;
+
+/*
+Usar %prec:
+É importante quando um mesmo token tem dois significados diferentes (como o - unário e binário).
+Evita conflitos de precedência.
+Garante a construção correta da árvore sintática e a avaliação da expressão.
+
+=> Usar %prec MENOSUNARIO para informar:
+   "Essa regra tem a precedência do token MENOSUNARIO, 
+    que foi declarado separadamente na seção de precedência".
+*/
 ```
 
 5. Criar o arquivo `Main.java`:
