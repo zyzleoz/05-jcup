@@ -1,0 +1,6 @@
+*.class 
+Main.class
+*.java~
+MeuScanner.java
+MeuParser.java
+sym.java
